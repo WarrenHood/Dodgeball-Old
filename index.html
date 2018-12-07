@@ -1,0 +1,70 @@
+<html>
+<head><script src='script.js'></script>
+<link rel='stylesheet' href='style.css'>
+<style>
+body{
+background:grey;
+overflow:hidden;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.block{
+border:5px solid black;
+height:300px;
+width:300px;
+position:absolute;
+border-radius:100%;}
+#red{
+background:rgba(999,0,0,1);
+left:450px;
+}
+#player{
+position:absolute;
+height:100px;
+width:50px;
+background:url('player.bmp');
+}
+.enemy{
+position:absolute;
+height:100px;
+width:50px;
+background:url('enemy.bmp');
+}
+#winloss{
+height:50px;
+width:800px;
+background:rgba(100,400,100,0.8);
+z-index:1;
+position:absolute;
+border:solid 10px rgba(400,400,400,0.8);
+border-radius:25px;
+top:50px;
+left:250px;
+font-size:50px;
+
+}
+#up{height:100px;
+width:100px;
+background:rgba(0,300,300,0.2);
+position:absolute;}
+#down{height:100px;
+background:rgba(0,600,300,0.2);
+width:100px;
+position:absolute;}
+</style>
+<body>
+<center><div id='winloss'>You win!</div><center>
+Health:<span id='health'>100</span>   <br>Points:<span id='points'>0</span>
+<div id='player'></div>
+<div id='red' class='block'></div>
+<script>
+for(i=0; i <= 50;i++){
+document.write("<div class='enemy'></div>")
+}
+</script>
+</body>
+</html>
